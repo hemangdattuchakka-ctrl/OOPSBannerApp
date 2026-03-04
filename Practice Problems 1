@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class StudentGradeCalculator {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        int marks;
+        boolean isPassed;
+
+        System.out.print("Enter student marks: ");
+        marks = input.nextInt();
+
+        isPassed = marks >= 40;
+
+        if (marks >= 90 && marks <= 100) {
+            System.out.println("Grade: A+");
+        } else if (marks >= 75) {
+            System.out.println("Grade: A");
+        } else if (marks >= 60) {
+            System.out.println("Grade: B");
+        } else if (marks >= 40) {
+            System.out.println("Grade: C");
+        } else {
+            System.out.println("Grade: Fail");
+        }
+
+        System.out.println("Passed: " + isPassed);
+
+        input.close();
+    }
+}
