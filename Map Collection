@@ -1,0 +1,43 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class BannerPatternRepository {
+
+    private Map<Character, String[]> patternMap;
+
+    public BannerPatternRepository() {
+        patternMap = new HashMap<>();
+        loadPatterns();
+    }
+
+    private void loadPatterns() {
+
+        patternMap.put('O', new String[]{
+                " ***** ",
+                "*     *",
+                "*     *",
+                "*     *",
+                " ***** "
+        });
+
+        patternMap.put('P', new String[]{
+                " ***** ",
+                "*     *",
+                " ***** ",
+                "*      ",
+                "*      "
+        });
+
+        patternMap.put('S', new String[]{
+                " ***** ",
+                "*      ",
+                " ***** ",
+                "      *",
+                " ***** "
+        });
+    }
+
+    public String[] getPattern(char ch) {
+        return patternMap.get(Character.toUpperCase(ch));
+    }
+}
