@@ -1,0 +1,25 @@
+public class OopsBannerUC4 {
+
+    public static void main(String[] args) {
+
+        String[] banner = createBanner();
+
+        // Enhanced for-loop for clean traversal
+        for (String line : banner) {
+            System.out.println(line);
+        }
+    }
+
+    private static String[] createBanner() {
+
+        String[] lines = new String[5];
+
+        lines[0] = String.join("   ", "OOOOO", "   O", "OOOOO", "OOOOO");
+        lines[1] = String.join("   ", "O   O", "   O", "O   O", "O   O");
+        lines[2] = String.join("   ", "O   O", "   O", "O   O", "O   O");
+        lines[3] = String.join("   ", "O   O", "   O", "O   O", "O   O");
+        lines[4] = String.join("   ", "OOOOO", "   O", "OOOOO", "OOOOO");
+
+        return lines;
+    }
+}
