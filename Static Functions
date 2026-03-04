@@ -1,0 +1,62 @@
+public class UC6BannerApp {
+
+    public static String[] buildO() {
+
+        return new String[]{
+                " ***** ",
+                "*     *",
+                "*     *",
+                "*     *",
+                " ***** "
+        };
+    }
+
+    public static String[] buildP() {
+
+        return new String[]{
+                " ***** ",
+                "*     *",
+                " ***** ",
+                "*      ",
+                "*      "
+        };
+    }
+
+    public static String[] buildS() {
+
+        return new String[]{
+                " ***** ",
+                "*      ",
+                " ***** ",
+                "      *",
+                " ***** "
+        };
+    }
+
+    public static void main(String[] args) {
+
+        String[] letterO = buildO();
+        String[] letterP = buildP();
+        String[] letterS = buildS();
+
+        String bannerWord = "OOPS";
+
+        int height = letterO.length;
+
+        for (int row = 0; row < height; row++) {
+
+            for (char ch : bannerWord.toCharArray()) {
+
+                if (ch == 'O') {
+                    System.out.print(letterO[row] + "  ");
+                } else if (ch == 'P') {
+                    System.out.print(letterP[row] + "  ");
+                } else if (ch == 'S') {
+                    System.out.print(letterS[row] + "  ");
+                }
+            }
+
+            System.out.println();
+        }
+    }
+}
