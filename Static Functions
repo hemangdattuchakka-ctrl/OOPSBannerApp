@@ -1,0 +1,58 @@
+public class OopsBannerUC6 {
+
+    public static void main(String[] args) {
+
+        String[] o = buildO();
+        String[] p = buildP();
+        String[] s = buildS();
+
+        int height = o.length;
+
+        String[] banner = new String[height];
+
+        for (int i = 0; i < height; i++) {
+            banner[i] = String.join("   ",
+                    o[i],
+                    o[i],
+                    p[i],
+                    s[i]);
+        }
+
+        for (String line : banner) {
+            System.out.println(line);
+        }
+    }
+
+    // Helper method for letter O
+    private static String[] buildO() {
+        return new String[]{
+                "OOOOO",
+                "O   O",
+                "O   O",
+                "O   O",
+                "OOOOO"
+        };
+    }
+
+    // Helper method for letter P
+    private static String[] buildP() {
+        return new String[]{
+                "PPPPP",
+                "P   P",
+                "PPPPP",
+                "P    ",
+                "P    "
+        };
+    }
+
+    // Helper method for letter S
+    private static String[] buildS() {
+        return new String[]{
+                "SSSSS",
+                "S    ",
+                "SSSSS",
+                "    S",
+                "SSSSS"
+        };
+    }
+}
